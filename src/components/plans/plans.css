@@ -1,0 +1,108 @@
+.plans-container {
+    margin-top: 2rem;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    position: relative;
+}
+
+.plans {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    margin-top: 5rem;
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    background: var(--calorycard);
+    color: aliceblue;
+    gap: 2rem;
+    padding: 2rem;
+    width: 18rem;
+}
+
+.plan:nth-child(2){
+    background: var(--plancard);
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.plan>svg{
+    fill: var(--orange);
+    height: 2rem;
+    width: 2rem;
+}
+
+.plan>:nth-child(2){
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.plan>:nth-child(3){
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.plan>:nth-child(5){
+    font-size: 0.9rem;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.feature>img {
+    width: 1rem;
+}
+
+.plans>:nth-child(2)>svg{
+    fill: aliceblue;
+}
+
+.plans>:nth-child(2)>button{
+    color: var(--orange);
+    
+}
+
+.plans-blur-1{
+    width: 60rem;
+    height: 28rem;
+    top: 6rem;
+    left: 5rem;
+}
+
+.plans-blur-2{
+    width: 45rem;
+    height: 28rem;
+    top: 8rem;
+    right: 0;
+}
+
+.titi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1500px){
+
+    .plans{
+        flex-direction: column;
+        
+    }
+}
