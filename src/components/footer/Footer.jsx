@@ -44,7 +44,7 @@ const Footer = () => {
                     <div>
                         <PlaceIcon sx={{fontSize: "2rem", color: "white"}}/>
                     </div>
-                    <a className='location' href="https://www.openstreetmap.org/#map=17/47.64871/-2.75969&layers=H" target="_blank" rel="noreferrer">Ou sommes nous ?</a> 
+                    <a className='location' href="https://www.openstreetmap.org/#map=17/47.64871/-2.75969&layers=H" target="_blank" rel="noreferrer">Nous trouvez</a> 
                  
                 </div>
 

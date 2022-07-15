@@ -27,8 +27,8 @@ function Plans() {
             <span>{p.price} €</span>
 
             <div className='features'>
-              {p.features.map((f, i) => (
-                <div className='feature'>
+              {p.features.map((f, j) => (
+                <div className='feature' key={j}>
                   <img src={whiteTick} alt='' />
                   <span key={i}>{f}</span>
                 </div>
@@ -39,7 +39,6 @@ function Plans() {
             </div>
             <Link
               to='footer'
-              span={true}
               smooth={true}
             >
               <div

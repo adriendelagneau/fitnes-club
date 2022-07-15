@@ -18,7 +18,7 @@ const Hero = () => {
             
             <div className='left-hero'>
                 <Header />
-        {/* Best Ad*/}
+                {/* Best Ad*/}
                 <div className='best-ad'>
                     <motion.div
                         initial={{left: '210px'}}
@@ -28,7 +28,7 @@ const Hero = () => {
                     </motion.div>
                     <span>le meilleur fitness-club de la ville</span>
                 </div>
-        {/* Hero Heading */}
+                {/* Hero Heading */}
                 <div className='hero-text'>
                     <div>
                         <span className='stroke-text'>Sculter </span>
@@ -37,40 +37,41 @@ const Hero = () => {
                 <div>
                 <span>Corp parfait</span>
             </div>
-        <div >
-        <span>
-        lorem5Pariatur pariatur velit id ut amet nisi 
-        consequat non aliquip consequat ullamco ex 
-        aliqua irure.
-        pariatur velit id ut amet nisi 
-        </span>
-        </div>
+            <div >
+                <span>
+                lorem5Pariatur pariatur velit id ut amet nisi 
+                consequat non aliquip consequat ullamco ex 
+                aliqua irure.
+                pariatur velit id ut amet nisi 
+                </span>
+            </div>
         </div>
         {/* Figures */}
         <div className='figures'>
+            <div>
+                <span>
+                    <NumberCounter end={140} start={100} delay={4} prefix="+" />
+                </span>
+                <span>coachs experts</span>
+            </div>
         <div>
-        <span>
-            <NumberCounter end={140} start={100} delay={4} prefix="+" />
-        </span>
-        <span>coachs experts</span>
+            <span>
+                <NumberCounter end={978} start={800} delay={4} prefix="+" />
+            </span>
+            <span>membres</span>
         </div>
+
         <div>
-        <span>
-        <NumberCounter end={978} start={800} delay={4} prefix="+" />
-        </span>
-        <span>membres</span>
+            <span>
+                <NumberCounter end={50} start={0} delay={2} prefix="+" />
+            </span>
+            <span>programes fitness</span>
         </div>
-        <div>
-        <span>
-        <NumberCounter end={50} start={0} delay={2} prefix="+" />
-        </span>
-        <span>programes fitness</span>
-        </div>
-        </div>
+
+    </div>
         {/* Hero Buttons */}
         <Link
             to='footer'
-            span={true}
             smooth={true}
         >
         <div className='hero-buttons'>

@@ -15,7 +15,7 @@ const Testimanials = () => {
     return (
         <div className='testimonials'>
            <div className='left-testi'>
-                <span>Testimonials</span>
+                <span>Vos avis</span>
                 <span className='stroke-text'>Que disent ils</span>
                 <span> a propos de nous</span>
                 <motion.span

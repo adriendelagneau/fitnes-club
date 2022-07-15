@@ -12,7 +12,7 @@
     justify-content: space-between;
     gap: 4rem;
     align-items: center;
-    height: 20rem;
+    height: 18rem;
 }
 
 .social-links {
@@ -38,13 +38,12 @@
 .location-box{
     color: aliceblue;
     display: flex;
-    font-size: 2rem;
     padding: 0.8rem 0;     
 }
 .mail,
 .phone,
 .location{
-    font-size: 2rem;
+    font-size: 1.6rem;
     padding-left: 1.5rem;
 }
 

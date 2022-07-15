@@ -20,7 +20,6 @@ const Header = () => {
                     <li>
                         <Link
                             to='hero'
-                            span={true}
                             smooth={true}
                             onClick={handleLinks}
                         >Accueil
@@ -29,7 +28,6 @@ const Header = () => {
                     <li>
                         <Link
                             to='programs'
-                            span={true}
                             smooth={true}
                             onClick={handleLinks}
                         >Programmes
@@ -38,7 +36,6 @@ const Header = () => {
                     <li>
                         <Link
                         to='plans'
-                        span={true}
                         smooth={true}
                         onClick={handleLinks}
                         >Abonnements
@@ -47,23 +44,12 @@ const Header = () => {
                     <li>
                         <Link
                             to='testimonials'
-                            span={true}
                             smooth={true}
                             onClick={handleLinks}
                         >Vos avis
                         </Link>
                     </li>
-                    {/**
-                    
-                    <li>
-                    <Link
-                    to='reasons'
-                    span={true}
-                    smooth={true}
-                    >Why choose us ?
-                    </Link>
-                    </li>
-                    */}
+                    {/***/}
                     </ul>
        
                     <div className='left' onClick={handleLinks}>

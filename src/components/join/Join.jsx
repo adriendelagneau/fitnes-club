@@ -1,16 +1,24 @@
-import React, { useRef } from 'react';
+import React, { useState} from 'react';
 import "./join.css"
-import emailjs from '@emailjs/browser'
+
 import { toast } from "react-toastify";
 
 
 const Join = () => {
-    const form = useRef()
+   const [email, setEmail] = useState("")
 
-    const sendEmail = (e) => {
+   const regex = new RegExp('[a-z0-9]+@[a-z]+.[a-z]{2,3}');
+
+
+
+    const getNewEmailForMyCollecton = (e) => {
         e.preventDefault();
-    
-        toast(`Nous allons prendre contact avec vous au plus vite ...`)
+        if(regex.test(email)){
+          toast(`Nous allons prendre contact avec vous au plus vite ...`)
+          setEmail("")
+        }else{
+          toast("email invalid")
+        }
       };
 
     return (
@@ -27,8 +35,15 @@ const Join = () => {
           </div>
           </div>
           <div className='right-join'>
-            <form ref={form} className='email-container' onSubmit={sendEmail}>
-                <input type="email" name="user_email" placeholder='Votre email'/>
+            <form  className='email-container' onSubmit={getNewEmailForMyCollecton}>
+                <input 
+                  type="email" 
+                  name="user_email" 
+                  placeholder='Votre email'
+                  value={email}
+                  onChange={(e) => setEmail( e.target.value)}
+                  
+                />
                 <button className='btn btn-join' >Evoyer</button>
             </form>
           </div>  
