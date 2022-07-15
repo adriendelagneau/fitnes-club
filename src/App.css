@@ -5,13 +5,26 @@
   --darkgray: #464d53;
   --calorycard: #656565;
   --plancard: linear-gradient(214deg, rgba(250,80,66,1) 1.15%, rgba(255,167,57,1) 100%);
-
   --appcolor: #3c3f45;
 }
+
+.Toastify__toast-container {
+  font-size: 18px;
+  width: 260px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 
 *{
   padding: 0;
   margin: 0;
+}
+
+a{
+  color: aliceblue;
+  text-decoration: none;
 }
 
 .App {

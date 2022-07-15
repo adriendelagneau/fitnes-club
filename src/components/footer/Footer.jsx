@@ -1,5 +1,7 @@
 import React from 'react';
-import "./footer.css"
+import "./footer.css";
+
+import { toast } from "react-toastify";
 
 import logo from "../../assets/logo.png";
 import { Phone } from '@mui/icons-material';
@@ -7,6 +9,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
+import PlaceIcon from '@mui/icons-material/Place';
 
 const Footer = () => {
     return (
@@ -14,26 +17,38 @@ const Footer = () => {
             <hr />
             <div className='footer'>
                 <div className='logo-f'>
-                    <img src={logo} alt="" />
+                    <img src={logo} alt="logo fitness" />
                 </div>
                 <div className='social-links'>
-                    <GitHubIcon sx={{fontSize: "4rem",color:"white" ,"&:hover": { color: `var(--orange)` } }}/>
-                    <InstagramIcon sx={{fontSize: "4rem",color:"white" ,"&:hover": { color: `var(--orange)` } }}/>
-                    <LinkedInIcon sx={{fontSize: "4rem",color:"white" ,"&:hover": { color: `var(--orange)` } }}/>
+                    <GitHubIcon className='social-icon' sx={{fontSize: "4rem"}}/>
+                    <InstagramIcon className='social-icon' sx={{fontSize: "4rem"}}/>
+                    <LinkedInIcon className='social-icon' sx={{fontSize: "4rem"}}/>
                 </div>
                 <div>
-                    <div style={{display: 'flex'}}>
+                    <div className='phone-box' style={{display: 'flex'}}>
                         <div >
-                            <Phone sx={{fontSize: "2rem",color:"white"  }}/>
+                            <Phone sx={{fontSize: "2rem", color: "white"}}/>
                         </div>
-                        <div style={{color: "aliceblue", fontSize: "2rem", paddingLeft: "1.5rem"}}>06 10 10 47 28 </div>
+                        <div className='phone'>06 10 10 47 28 </div>
                     </div>
-                    <div className='toto' style={{display: 'flex', marginTop: '1rem' }} onClick={() => window.location = 'mailto:fit-club@gmail.com'}>
+                    <div className='mail-box' onClick={() => window.location = 'mailto:fit-club@gmail.com'}>
                         <div>
-                            <EmailIcon sx={{fontSize: "2rem",color:"white"  }}/>
+                            <EmailIcon sx={{fontSize: "2rem", color: "white"}}/>
                         </div>
-                        <div style={{color: "aliceblue", fontSize: "2rem" ,paddingLeft: "1.5rem"}}>fit-club@gmail.com </div>
+                        <div className='mail'>fit-club@gmail.com </div>
                     </div>
+
+
+
+                    <div className='location-box' >
+                    <div>
+                        <PlaceIcon sx={{fontSize: "2rem", color: "white"}}/>
+                    </div>
+                    <a className='location' href="https://www.openstreetmap.org/#map=17/47.64871/-2.75969&layers=H" target="_blank" rel="noreferrer">Ou sommes nous ?</a> 
+                 
+                </div>
+
+
                 </div>
             </div>
             <div className='blur blur-footer-1'></div>

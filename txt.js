@@ -1,263 +1,70 @@
-import React from 'react';
-import styled from 'styled-components';
-import { mobile } from "../responsive";
-import Badge from '@mui/material/Badge';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { Link, useNavigate } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
-import { logout } from '../slices/authSlice'
+toast.success(`abonné à la newsletter `)
 
-const Container = styled.div`
-  height: 80px;
-  position sticky;
-  top: 0;
-  z-index: 999;
-  ${mobile({ height: "50px",
-             marginBottom: "40px", 
-    })}
-`;
 
-const Nav = styled.nav`
-    display: flex;
-    height: 80px;
-    justify-content: space-between;
-    align-items: center;
-    background: teal;
-    
 
-    a{
-      color: white;
-    }
+const sendEmail = (e) => {
+    e.preventDefault();
 
-    #sidebar{
-        display:none;
-        flex-direction: row;
-        align-items: center;
-        background: teal ;
-        display: inline;
-        position: absolute;
-        top:76px;
-        left: -110px;
-        transition: 0.5s ease-in-out;
-        width: 110px;
-        height: 130px;
-        padding-top: 20px;
-    }
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
-    #sidebar.open{
-        left: 0px;
-    }
-`
-const Center = styled.div`
-    flex:1;
-    text-align: center;
-`
-const Logo = styled.h1`
-    font-size: 35px;
-    font-weight: bold;
 
-    ${mobile({ fontSize: "24px" })}
-`;
-const Right = styled.div`
-    flex:1;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    padding-right: 20px;
-`
-const MenuItem = styled.div`
-    font-size: 14px;
-    cursor: pointer;
-    margin-left: 25px;
-  `;
-  const Navdiv = styled.div`
-    display:flex;
-    color: white;
 
-    ${mobile({
-    display:"none",
-    })}
-`
-const CartIcon = styled.div`
-    padding-left:30px;
-`
 
-const UserLinkSmall = styled.div`
-    padding: 15px 15px;
-    color: white;
-`
 
-const Left = styled.div`
-    flex:1;
-    padding-left: 30px;
+  /***** toast variable environnement & toast container *****/
 
-    .open .barre{
-        background: teal;
-        
-        &:after{
-            top: 0;
-            transform: rotate(45deg);
-        }
-        &:before{
-            top: 0;
-            transform: rotate(-45deg);
-        }
-    }
-`
 
-const Burger = styled.div`
-    cursor: pointer;
-    width:30px;
-    height: 50px;
-    display: none;
-
-    .barre{
-        width:30px;
-        height: 3px;
-        background: white;
-        position: absolute;
-        transition: .5s;
-        top: 40px;
-
-        &:after,
-        &:before{
-            content:"";
-            position: absolute;
-            width: 30px;
-            height: 3px;
-            background: rgb(255, 255, 255);
-            transition: .5s;
-            borderRadius: 5px;
-            color:white;
-        }
-        &:after{
-            top:10px;
-        }
-        &:before{
-            top:-10px;
-        }
-    }
-
-    ${mobile({
-        display:"flex",
-      })}
-`
-
-const Navbar = () => {
-
-  const { cartTotalQuantity } = useSelector((state) => state.cart);
-  const {user} = useSelector((state) => state.user)
-
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
-
-  const onLogout = () => {
-    dispatch(logout())
-    
-    navigate('/')
-  }
-
-// ADD CLASS TO CHANGE BURGER FORM AND OPEN SIDEBAR
-const changeForm = () => {
-  const menuIcon = document.getElementById("myID");
-  const menuLinks = document.getElementById("sidebar")
+  --toastify-color-light: #fff;
+  --toastify-color-dark: #121212;
+  --toastify-color-info: #006966;
+  --toastify-color-success: #f48915;
+  --toastify-color-warning:rgb(133, 124, 255);
+  --toastify-color-error: #8d001a; 
+  --toastify-color-transparent: rgba(255, 255, 255, 0.7);
   
-      if(menuIcon.classList.contains("open"))
-      menuIcon.classList.remove("open")
-      else{
-          menuIcon.classList.add("open")
-      }
-      
-      if(menuLinks.className === "open")
-      menuLinks.classList.remove("open")
-      else{
-          menuLinks.classList.add("open")
-      }
-  }
-
-// REBOOT MENU BURGER AND SIDEBAR SYSTEM
-  window.addEventListener('resize', ()=> {
-      const menuLinks = document.getElementById("sidebar")
-      const menuIcon = document.getElementById("myID");
-
-      if(window.innerWidth > 980 ) {
-          menuLinks.classList.remove("open")
-          menuIcon.classList.remove("open")
-      }
-  }, true);
-
-  return (
-    <Container>
-    <Nav>
-
-    <div id="sidebar" >
-    {user ? 
-        <React.Fragment>
-           <Link to="/profil" aria-label="Profil">
-               <UserLinkSmall>PROFILE</UserLinkSmall>
-           </Link>
-           <Link to="/" aria-label="Deconnexion">
-                <UserLinkSmall>LOGOUT</UserLinkSmall>
-           </Link>
-       </React.Fragment>
-       :
-       <React.Fragment>
-           <Link to="/register" aria-label="S'enregistrer">
-               <UserLinkSmall>S'ENREGISTER</UserLinkSmall>
-           </Link>
-           <Link to="/login" aria-label="S connecter">
-               <UserLinkSmall>SE CONNECTER</UserLinkSmall>
-           </Link> 
-       </React.Fragment>
-    }
-    </div>
-
-    <Left>
-        <Burger onClick={changeForm} id="myID">
-            <div className='barre'></div>
-        </Burger>
-
-    </Left>
-
-
-    <Center>
-    <Link to="/" aria-label="Accueil">
-        <Logo>LE SHOP.</Logo>
-    </Link>
-</Center>
-
-<Right>
-      
-{ user ? 
-    <Navdiv>
-        <Link to="/profil" aria-label="Profil">
-            <MenuItem>PROFILE</MenuItem>
-        </Link>
-        <MenuItem onClick={onLogout}>DECONNEXION</MenuItem>
-    </Navdiv>
-    :
-    <Navdiv>
-        <Link to="/register" aria-label="S'enregistrer">
-            <MenuItem>S'ENREGISTER</MenuItem>
-        </Link>
-        <Link to="/login" aria-label="Se connecter">
-            <MenuItem>SE CONNECTER</MenuItem>
-        </Link>
-    </Navdiv>
-}
-
-<CartIcon>
-<Link to="/cart" aria-label="Pannier">
-<Badge badgeContent={cartTotalQuantity ? cartTotalQuantity : 0} color="primary">
-      <ShoppingCartOutlinedIcon/>
-  </Badge>
-</Link>
-</CartIcon>
-</Right>
-
-</Nav>
-    </Container>
-  );
-};
-
-export default Navbar;
+  --toastify-icon-color-info: var(--toastify-color-info);
+  --toastify-icon-color-success: var(--toastify-color-success);
+  --toastify-icon-color-warning: var(--toastify-color-warning);
+  --toastify-icon-color-error: var(--toastify-color-error);
+  
+  --toastify-toast-width: 260px;
+  --toastify-toast-background: #fff;
+  --toastify-toast-min-height: 64px;
+  --toastify-toast-max-height: 800px;
+  --toastify-font-family: sans-serif;
+  --toastify-z-index: 9999;
+  
+  --toastify-text-color-light: #757575;
+  --toastify-text-color-dark: #fff;
+  
+  /* Used only for colored theme */
+  --toastify-text-color-info: #fff;
+  --toastify-text-color-success: #fff;
+  --toastify-text-color-warning: #fff;
+  --toastify-text-color-error: #fff;
+  
+  --toastify-spinner-color: #616161;
+  --toastify-spinner-color-empty-area: #e0e0e0;
+  
+  /* Used when no type is provided
+     toast("**hello**")
+     */
+     --toastify-color-progress-light: linear-gradient(to right,
+     #4cd964,
+     #5ac8fa,
+      #007aff,
+      #34aadc,
+      #5856d6,
+      #ff2d55);
+      /* Used when no type is provided */
+  --toastify-color-progress-dark: #bb86fc;
+  --toastify-color-progress-info: var(--toastify-color-info);
+  --toastify-color-progress-success: var(--toastify-color-success);
+  --toastify-color-progress-warning: var(--toastify-color-warning);
+  --toastify-color-progress-error: var(--toastify-color-error);

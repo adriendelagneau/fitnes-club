@@ -45,11 +45,13 @@
     outline: none;
     color: var(--lightgray);
 }
+.right-join input{
+    font-size: 20px;
+}
 
 ::placeholder{
     color: var(--lightgray);
     font-size: 20px;
-
 }
 
 .btn-join{

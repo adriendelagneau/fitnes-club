@@ -34,7 +34,6 @@
 
 .right-testi{
     flex: 1;
- 
     height: 300px;
     position: relative;
 }
@@ -62,9 +61,8 @@
     position: absolute;
     width: 17rem;
     height: 19rem;
-    
     background: var(--plancard);
-  right: 7rem;
+    right: 7rem;
     top: 4rem;
 }
 
@@ -86,7 +84,8 @@
     .testimonials{
         flex-direction:column;
         align-items: center;
-        height: 900px;
+        height: 700px;
+        margin-bottom: 6rem;
         
     }
     .right-testi>img{
@@ -97,7 +96,6 @@
         right: -0.5rem;
         top: -37rem;
     }
-    
     .right-testi>:nth-child(1){
         position: relative;
         background-color: transparent;
@@ -130,11 +128,12 @@
         width: 100vw;
         text-align: center;
     }
-
 }
 
 @media screen and (max-width: 1620px) and  (min-width: 1050px){
-    
+    .testimonials{
+        height: auto;
+    }
     .arrows{
         display: flex;
         position: absolute;

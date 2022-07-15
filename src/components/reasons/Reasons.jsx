@@ -13,37 +13,49 @@ const Reasons = () => {
     return (
         <div className='reasons' id="reasons">
             <div className='left-reasons'>
-                <img src={image1} alt=""/>
-                <img src={image2} alt=""/>
-                <img src={image3} alt=""/>
-                <img src={image4} alt=""/>
+                <div className='grid-box-1'>
+                    <img src={image1} alt="" />
+                </div>
+                <div className='grid-box-2'>
+                    <div className='grid-box-3'>
+                        <img src={image2} alt="" />
+                    </div>
+                    <div className='grid-box-4'>
+                        <div className='grid-box-5'>
+                            <img src={image3} alt="" />
+                        </div>
+                        <div className='grid-box-6'>
+                            <img src={image4} alt="" />
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div className='right-reasons'>
-                <span>some reasons</span>
+                <span>quelques raisons</span>
                 <div>
-                    <span className='stroke-text'>why </span>
-                    <span>choose us ?</span>
+                    <span className='stroke-text'>pourquoi </span>
+                    <span>nous choisir ?</span>
                 </div>
                 <div className='details-reasons'>
                     <div>
                         <img src={tick} alt='' />
-                        <span>OVER 140+ EXPERT COACHS</span>
+                        <span>PLUS DE 140 COACHS EXPERTS</span>
                     </div>
                     <div>
                         <img src={tick} alt='' />
-                        <span>TRAIN SMARTER AND FASTER THAN BEFORE</span>
+                        <span>ENTRAÎNEMENT PLUS INTELLIGENT ET PLUS RAPIDE </span>
                     </div>
                     <div>
                         <img src={tick} alt='' />
-                        <span>FREE PROGRAMS FOR NEW MEMBER</span>
+                        <span>PROGRAMMES GRATUIT PUR LES NOUVEAUX MEMBRES</span>
                     </div>
                     <div>
                         <img src={tick} alt='' />
-                        <span>RELIABLE PARTNERS</span>
+                        <span>DES PARTENAIRES FIABLES</span>
                     </div>
                 </div>
-                <span style={{color: `var(--gray)`, fontSize: 'normal'}}>OUR PARTNERS</span>
+                <span style={{color: `var(--gray)`, fontSize: 'normal'}}>NOS PARTENAIRES</span>
                 <div className='partners'>
                     <img src={nb} alt='nb'/>
                     <img src={addidas} alt='addidas'/>

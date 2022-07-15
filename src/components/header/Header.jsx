@@ -1,54 +1,29 @@
-import React from 'react';
+import React, { useState} from 'react';
 import "./header.css"
 import Logo from "../../assets/logo.png"
 import {Link} from 'react-scroll'
 
 const Header = () => {
 
-    const changeForm = () => {
-        const menuIcon = document.getElementById("myID");
-        const menuLinks = document.getElementById("sidebar")
-        
-        
-            if(menuIcon.classList.contains("open"))
-                menuIcon.classList.remove("open")
-            else{
-                menuIcon.classList.add("open")
-            }
+    const [showLinks, setShowLinls] = useState(false)
 
-            if(menuLinks.classList.contains('open'))
-                menuLinks.classList.remove("open")
-            else{
-                menuLinks.classList.add("open")
-            }
-        }
-
-        // REBOOT MENU BURGER AND SIDEBAR SYSTEM
-  window.addEventListener('resize', ()=> {
-    const menuLinks = document.getElementById("sidebar")
-    const menuIcon = document.getElementById("sidebar");
-
-    if(window.innerWidth > 980 ) {
-        menuLinks.classList.remove("open")
-        menuIcon.classList.remove("open")
+    const handleLinks = () => {
+        setShowLinls(!showLinks)
     }
-}, true);
 
       
-
-
     return (
         <div className='header'>
             <img className='logo' src={Logo} alt='Logo fitness' />
            
-                <ul className='header-menu' id="sidebar">
+                <ul className={`header-menu ${showLinks ? "open" : "close"}`}   id="sidebar">
                     <li>
                         <Link
                             to='hero'
                             span={true}
                             smooth={true}
-                            onClick={changeForm}
-                        >Home
+                            onClick={handleLinks}
+                        >Accueil
                         </Link>
                     </li>
                     <li>
@@ -56,8 +31,8 @@ const Header = () => {
                             to='programs'
                             span={true}
                             smooth={true}
-                            onClick={changeForm}
-                        >Programs
+                            onClick={handleLinks}
+                        >Programmes
                         </Link>
                     </li>
                     <li>
@@ -65,8 +40,8 @@ const Header = () => {
                         to='plans'
                         span={true}
                         smooth={true}
-                        onClick={changeForm}
-                        >Plans
+                        onClick={handleLinks}
+                        >Abonnements
                         </Link>
                     </li>
                     <li>
@@ -74,8 +49,8 @@ const Header = () => {
                             to='testimonials'
                             span={true}
                             smooth={true}
-                            onClick={changeForm}
-                        >Testimonials
+                            onClick={handleLinks}
+                        >Vos avis
                         </Link>
                     </li>
                     {/**
@@ -91,8 +66,8 @@ const Header = () => {
                     */}
                     </ul>
        
-                    <div className='left' onClick={changeForm}>
-                    <div className='burger'  id="myID">
+                    <div className='left' onClick={handleLinks}>
+                    <div className={` burger ${showLinks ? "open" : "close"}`}  id="myID">
                     <div className='barre'></div>
                     </div>
                     </div>

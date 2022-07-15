@@ -75,8 +75,7 @@
 }
 
 .plans>:nth-child(2)>button{
-    color: var(--orange);
-    
+    color: var(--orange); 
 }
 
 .plans-blur-1{
@@ -93,7 +92,7 @@
     right: 0;
 }
 
-.titi{
+.benefits{
     display: flex;
     align-items: center;
     justify-content: center;

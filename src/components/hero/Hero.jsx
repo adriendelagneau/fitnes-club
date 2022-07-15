@@ -3,11 +3,11 @@ import Header from '../header/Header';
 import "./hero.css"
 import hero_img from "../../assets/hero_image.png";
 import hero_img_back from "../../assets/hero_image_back.png";
-import Heart from "../../assets/heart.png";
 import Calories from "../../assets/calories.png"
 import {motion} from "framer-motion"
 import NumberCounter from 'number-counter'
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import {Link} from 'react-scroll'
 
 const Hero = () => {
 
@@ -26,16 +26,16 @@ const Hero = () => {
                         transition={{...transition, type: 'tween'}}
                     >
                     </motion.div>
-                    <span>the best fitness club in the town</span>
+                    <span>le meilleur fitness-club de la ville</span>
                 </div>
         {/* Hero Heading */}
                 <div className='hero-text'>
                     <div>
-                        <span className='stroke-text'>Shape </span>
-                        <span>Your</span>
+                        <span className='stroke-text'>Sculter </span>
+                        <span>Votre</span>
                     </div>
                 <div>
-                <span>Ideal Body</span>
+                <span>Corp parfait</span>
             </div>
         <div >
         <span>
@@ -52,26 +52,31 @@ const Hero = () => {
         <span>
             <NumberCounter end={140} start={100} delay={4} prefix="+" />
         </span>
-        <span>expert coachs</span>
+        <span>coachs experts</span>
         </div>
         <div>
         <span>
         <NumberCounter end={978} start={800} delay={4} prefix="+" />
         </span>
-        <span>members joined</span>
+        <span>membres</span>
         </div>
         <div>
         <span>
         <NumberCounter end={50} start={0} delay={2} prefix="+" />
         </span>
-        <span>fitness programs</span>
+        <span>programes fitness</span>
         </div>
         </div>
         {/* Hero Buttons */}
+        <Link
+            to='footer'
+            span={true}
+            smooth={true}
+        >
         <div className='hero-buttons'>
-        <button className='btn'>Get Started</button>
-        <button className='btn'>Learn More</button>
-        </div>
+      <button className='btn'>Voir plus</button>
+      </div>
+      </Link>
         </div>
         
         
@@ -108,7 +113,7 @@ const Hero = () => {
                         >
                     <img src={Calories} alt="graphique" />
                     <div>
-                    <span>Calories Burned</span>
+                    <span>Calories Brulées</span>
                     <span>220 Kcal</span>
                     </div>
                     </motion.div>    

@@ -9,13 +9,13 @@ function Plans() {
   return (
     <div className='plans-container' id="plans">
 
-    <div className='blur plans-blur-1'></div>
-    <div className='blur plans-blur-2'></div>
+      <div className='blur plans-blur-1'></div>
+      <div className='blur plans-blur-2'></div>
     
       <div className='programs-header' style={{gap: '2rem'}}>
-        <span className='stroke-text'>READY TO START</span>
-        <span style={{color: 'aliceblue'}}>YOUR JOURNEY</span>
-        <span className='stroke-text'>NOW WITHUS</span>
+        <span className='stroke-text'>PRET A COMMENCER</span>
+        <span style={{color: 'aliceblue'}}>L'AVENTURE</span>
+        <span className='stroke-text'>AVEC NOUS</span>
       </div>
 
       {/* plans card */}
@@ -35,19 +35,19 @@ function Plans() {
               ))}
             </div>
             <div >
-                <span className='titi'>See more benefits... <ArrowDownwardIcon style={{fontSize: "1.4rem", paddingLeft: "1rem"}}/></span>
+                <span className='benefits'>Plus d'informations... <ArrowDownwardIcon style={{fontSize: "1.4rem", paddingLeft: "1rem"}}/></span>
             </div>
             <Link
               to='footer'
               span={true}
               smooth={true}
             >
-            <div
-              className='btn'
-              style={{color: "black"}}
-              >
-              Join Now
-              </div>
+              <div
+                className='btn'
+                style={{color: "black"}}
+                >
+                Rejoigner nous
+                </div>
               </Link>
           </div>
         ))}
