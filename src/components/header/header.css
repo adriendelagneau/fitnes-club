@@ -17,10 +17,11 @@
     gap: 3.5rem;
     color: aliceblue;
     font-size: 1.3rem;
+    position: relative;
   
 }
 
-.header-menu>li:hover{
+.header-menu>li>:hover{
    
     text-align: center;
     color: var(--orange);

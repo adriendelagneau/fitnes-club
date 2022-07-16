@@ -29,6 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    
 }
 
 .email-container{
@@ -36,10 +37,12 @@
     gap: 3rem;
     background-color: gray;
     padding: 1rem 2rem;
-   
+    width: 27rem;
+    
 }
 
 .email-container>input{
+    
     background-color: transparent;
     border: none;
     outline: none;
@@ -66,5 +69,33 @@
    .join{
        flex-direction: column;
        gap: 10rem;
+       align-items: center;
    }
 }
+
+
+@media screen and (max-width: 1050px){
+
+ 
+.left-join>div{
+    font-size: 2.4rem;
+}
+}
+@media screen and (max-width: 551px){
+
+    .email-container{
+        width: 90vw;
+        gap: 0rem;
+        padding: 1rem ;
+    }
+    .email-container>input{
+    
+        width: 12rem;
+        max-width: 90vw;
+    }
+    .right-join{
+        width: 12rem;
+        max-width: 90vw;
+    }
+ }
+

@@ -1,9 +1,9 @@
 import React from 'react'
 import "./plans.css"
 import {plansData} from "../../data/plansData"
-import whiteTick from "../../assets/whiteTick.png"
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import {Link} from 'react-scroll'
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 function Plans() {
   return (
@@ -13,7 +13,9 @@ function Plans() {
       <div className='blur plans-blur-2'></div>
     
       <div className='programs-header' style={{gap: '2rem'}}>
-        <span className='stroke-text'>PRET A COMMENCER</span>
+      
+        <span style={{color: 'aliceblue'}}>PRET A </span>
+        <span className='stroke-text'> COMMENCER</span>
         <span style={{color: 'aliceblue'}}>L'AVENTURE</span>
         <span className='stroke-text'>AVEC NOUS</span>
       </div>
@@ -29,7 +31,7 @@ function Plans() {
             <div className='features'>
               {p.features.map((f, j) => (
                 <div className='feature' key={j}>
-                  <img src={whiteTick} alt='' />
+                  <CheckCircleIcon />
                   <span key={i}>{f}</span>
                 </div>
               ))}

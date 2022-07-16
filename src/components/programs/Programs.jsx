@@ -14,7 +14,7 @@ const Programs = () => {
             {/* header */}
             <div className='programs-header'>
                 <span className='stroke-text'>Decouvrez nos</span>
-                <span>Programmes</span>
+                <span style={{ color: "aliceblue"}}>Programmes</span>
                 <span className='stroke-text'>d'entrainement</span>
             </div>
 

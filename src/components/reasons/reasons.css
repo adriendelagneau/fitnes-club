@@ -6,15 +6,15 @@
 }
 
 .left-reasons {
-  flex: 1;
-  display: flex;
-  height: 500px;
-
+    flex: 1;
+    display: flex;
+    height: 500px;
+    
 }
 
 .left-reasons img{
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .grid-box-1{
@@ -53,6 +53,7 @@
     flex-direction: column;
     max-width: 50%;
     padding-left: 10rem;
+    margin-top: 4rem;
 }
 
 .right-reasons>span{
@@ -107,8 +108,14 @@
         padding-left: 0rem;
         align-items: center;
     }
-    .left-reasons{
-        grid-auto-rows: auto;
-        overflow: hidden;
+   
+}
+
+
+@media screen and (max-width: 1050px){
+
+    .right-reasons>div{
+        font-size: 2.4rem; 
     }
+   
 }

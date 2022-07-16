@@ -22,7 +22,8 @@
     color: aliceblue;
     gap: 2rem;
     padding: 2rem;
-    width: 18rem;
+    
+    max-width: 90vw;
 }
 
 .plan:nth-child(2){
@@ -103,5 +104,21 @@
     .plans{
         flex-direction: column;
         
+    }
+    .plan:nth-child(2){
+        background: var(--plancard);
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+}
+
+
+@media screen and (max-width: 1050px){
+
+    .plans{
+ 
     }
 }

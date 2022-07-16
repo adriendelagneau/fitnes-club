@@ -15,8 +15,11 @@
     font-style: italic;
 }
 
+
+
 .programs-header span{
     text-align: center;
+    
 }
 
 
@@ -30,7 +33,7 @@
 
 .category{
     display: flex;
-   height: 20rem;
+    height: 20rem;
     width: 20rem;
     flex-direction: column;
     background-color: gray;
@@ -82,11 +85,42 @@
 
 @media screen and (max-width: 1050px){
     
+    .category{
+        width: 20rem;
+    }
     .programs-categories{
         gap: 2.5rem;
     }
     .programs-header{
         flex-direction: column;
         justify-content: center;
+        font-size: 2.2rem;
+        gap: 3rem;
+    }
+
+   
+}
+
+@media screen and (max-width: 1620px) and  (min-width: 1050px){
+    
+    .programs-header{
+       gap: 2rem;
+    }
+    .programs-header span{
+        text-align: center;
+        font-size: 2.4rem;
+        
     }
 }
+
+@media screen and (max-width: 5510px){
+    
+    .category{
+        width: 16rem;
+    }
+   
+
+   
+}
+
+

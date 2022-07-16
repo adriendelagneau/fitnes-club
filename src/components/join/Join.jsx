@@ -17,7 +17,7 @@ const Join = () => {
           toast(`Nous allons prendre contact avec vous au plus vite ...`)
           setEmail("")
         }else{
-          toast("email invalid")
+          toast.success("email invalid")
         }
       };
 
@@ -26,12 +26,13 @@ const Join = () => {
           <div className='left-join'>
           <hr />
             <div>
-                <span className='stroke-text'>PRET A</span>
-                <span> TONNIFIER</span>
+                <span >PRET </span>
+                <span className='stroke-text'>A</span>
             </div>
             <div>
-              <span >VOTRE CORP</span>
-              <span className='stroke-text'> AVEC NOUS ?</span>
+              <span className='stroke-text'>NOUS </span>
+              <span>REJOINDRE</span>
+
           </div>
           </div>
           <div className='right-join'>

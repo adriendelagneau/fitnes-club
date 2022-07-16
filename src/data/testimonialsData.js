@@ -1,6 +1,7 @@
 import image1 from "../assets/t-image1.png";
-import image2 from "../assets/t-image2.jpg";
+
 import image3 from "../assets/t-image3.jpg";
+import image4 from "../assets/stock-photo.jpeg";
 
 export const testimonialsData = [
   {
@@ -11,10 +12,10 @@ export const testimonialsData = [
     status : 'ENTREPRENEUR'
   },
   {
-    image: image2,
+    image: image4,
     review:
     "J'ai fait le bon choix en choisissant le Fitclub et en choisissant le bon plan et programme j'ai déjà atteint mon corps idéal !",
-    name: 'JOHN KEVIN',
+    name: 'JESSE JANE',
     status: 'COACH'
   },
   {

@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from '../header/Header';
 import "./hero.css"
-import hero_img from "../../assets/hero_image.png";
+
+import runneuse from "../../assets/runneuse.png"
 import hero_img_back from "../../assets/hero_image_back.png";
 import Calories from "../../assets/calories.png"
 import {motion} from "framer-motion"
@@ -31,11 +32,12 @@ const Hero = () => {
                 {/* Hero Heading */}
                 <div className='hero-text'>
                     <div>
-                        <span className='stroke-text'>Sculter </span>
-                        <span>Votre</span>
+                        <span >Sculter </span>
+                        <span className='stroke-text'>Votre</span>
                     </div>
                 <div>
-                <span>Corp parfait</span>
+                <span className='stroke-text'>Corp </span>
+                <span>parfait</span>
             </div>
             <div >
                 <span>
@@ -95,7 +97,7 @@ const Hero = () => {
                     </motion.div>
                     
                     {/* hero image */}
-                    <img src={hero_img} alt="" className='hero-img'/>
+                    <img src={runneuse} alt="" className='hero-img'/>
                     <motion.img 
                         src={hero_img_back} 
                         alt="" 

@@ -1,9 +1,10 @@
 import React from 'react';
 import "./reasons.css";
 import image1 from "../../assets/image1.png"
-import image2 from "../../assets/image2.png"
+
 import image3 from "../../assets/image3.png"
 import image4 from "../../assets/image4.png"
+import femmeMuscu from "../../assets/musculation-femme.jpg"
 import nb from "../../assets/nb.png"
 import addidas from "../../assets/adidas.png"
 import nike from "../../assets/nike.png"
@@ -18,7 +19,7 @@ const Reasons = () => {
                 </div>
                 <div className='grid-box-2'>
                     <div className='grid-box-3'>
-                        <img src={image2} alt="" />
+                        <img src={femmeMuscu} alt="" />
                     </div>
                     <div className='grid-box-4'>
                         <div className='grid-box-5'>
@@ -33,10 +34,16 @@ const Reasons = () => {
             
             <div className='right-reasons'>
                 <span>quelques raisons</span>
+
+
                 <div>
-                    <span className='stroke-text'>pourquoi </span>
-                    <span>nous choisir ?</span>
+                    <span >pourquoi </span>
+                    <span className='stroke-text'>nous </span>
+                    <span className='stroke-text'>faire</span>
+                    <span> confiance</span>
                 </div>
+
+
                 <div className='details-reasons'>
                     <div>
                         <img src={tick} alt='' />

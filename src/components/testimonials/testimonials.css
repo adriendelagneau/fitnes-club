@@ -11,7 +11,7 @@
     flex-direction: column;
     text-transform: uppercase;
     color: aliceblue;
-    width: 50vw;
+    width: 55vw;
 }
 
 .left-testi>:nth-child(1){
@@ -141,5 +141,15 @@
         bottom: -7rem;
         left: 8rem;
     }
+}
+
+@media screen and  (max-width: 524px){
+    .left-testi>:nth-child(2),
+    .left-testi>:nth-child(3){
+   
+    font-size: 2.2rem;
+    }
 
 }
+
+

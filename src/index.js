@@ -13,7 +13,8 @@ root.render(
   position="bottom-left"
   theme="colored"
   fontWeight="700"
-  toastStyle={{ backgroundColor: "#f48915", color: "aliceblue", fontSize: "1.5rem" }}
+
+  toastStyle={{ backgroundColor: "#f48915",  fontSize: "1.3rem" }}
 
 />
     <App />

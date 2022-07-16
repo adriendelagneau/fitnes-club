@@ -12,6 +12,9 @@ const Testimanials = () => {
     const [selected, setSelected] = useState(0)
     const tLength = testimonialsData.length
 
+
+
+
     return (
         <div className='testimonials'>
            <div className='left-testi'>
